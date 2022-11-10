@@ -1,0 +1,161 @@
+:root {
+  --main-color: greenyellow;
+  --bg: #1b1b39;
+}
+/* =========================== Start setting-box  ===========================   */
+.setting-box {
+  position: fixed;
+  left: -200px;
+  top: 0;
+  z-index: 25;
+  height: 100vh;
+  background: white;
+  width: 200px;
+  transition: 0.3s;
+}
+.setting-box.active {
+  left: 0;
+}
+.setting-box .gear-container {
+  position: absolute;
+  top: 110px;
+  right: -36px;
+  z-index: 25;
+  background: white;
+  padding: 13px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.setting-box .gear {
+  color: var(--main-color);
+}
+.setting-box .gear.active {
+  animation: rotateRight 5s infinite linear;
+}
+.setting-box .box-option {
+  background: #ad6464;
+}
+.setting-box .box-option h4 {
+  text-align: center;
+  padding: 30px 0 0;
+  color: var(--main-color);
+}
+.setting-box .box-option span {
+}
+.setting-box .box-option ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 30px;
+}
+.setting-box .box-option ul li {
+  width: 20px;
+  height: 20px;
+  cursor: pointer;
+  border: 3px solid white;
+}
+.setting-box .box-option ul li.active {
+  border-radius: 50%;
+}
+.setting-box .box-option li:first-child {
+  background: greenyellow;
+}
+.setting-box .box-option li:nth-child(2) {
+  background: red;
+}
+.setting-box .box-option li:nth-child(3) {
+  background: black;
+}
+.setting-box .box-option li:nth-child(4) {
+  background: blue;
+}
+.setting-box .box-option li:nth-child(5) {
+  background: yellow;
+}
+
+/* =========================== End setting-box  ===========================   */
+header {
+  background: var(--bg);
+  color: var(--main-color);
+}
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  min-height: 70px;
+}
+@media (max-width: 576px) {
+  header .logo {
+    width: 100%;
+    text-align: center;
+  }
+}
+header ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+@media (max-width: 576px) {
+  header ul {
+    margin: auto;
+  }
+}
+header ul a {
+  padding: 0px 20px;
+  color: var(--main-color);
+  transition: 0.3s;
+}
+
+header ul a:hover,
+header ul a.active {
+  color: var(--main-color);
+}
+@media (max-width: 576px) {
+  header ul a {
+    padding: 0 4px;
+  }
+}
+
+/*  ================================End header   ================================ */
+/*  ================================ Start landing   ================================*/
+.landing {
+  min-height: calc(100vh - 70px);
+  background-image: url("../assets/img/bg01.jpg");
+  background-size: cover;
+  background-attachment: fixed;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 1.5s;
+}
+.landing::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0%;
+  background-color: #000000d1;
+  width: 100%;
+  height: 100%;
+}
+.landing .intro__text {
+  position: relative;
+  z-index: 5;
+  max-width: 450px;
+  text-align: center;
+  margin: auto;
+  line-height: 2;
+  font-size: 24px;
+}
+.landing .intro__text h1 {
+  color: #fbfbfb;
+  margin: 0%;
+}
+.landing .intro__text h1 span {
+  color: var(--main-color);
+}
+.landing .intro__text p {
+  color: #ffffffdb;
+}
+/* ================================End landing   ================================ */
